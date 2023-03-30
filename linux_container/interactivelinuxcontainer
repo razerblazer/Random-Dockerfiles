@@ -1,0 +1,21 @@
+from ubuntu:22.04
+
+RUN apt update -y
+RUN apt install -y vim
+RUN apt install -y ssh
+RUN apt install -y git
+RUN apt install -y dos2unix #this is to properly convert the windows txt file format to unix
+RUN apt install -y ssh
+
+WORKDIR /root
+
+#COPY .ssh /.ssh
+COPY .vimrc .
+
+
+RUN dos2unix .vimrc
+
+
+EXPOSE 
+
+CMD ["bash"]
