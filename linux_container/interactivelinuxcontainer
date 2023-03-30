@@ -16,6 +16,5 @@ COPY .vimrc .
 RUN dos2unix .vimrc
 
 
-EXPOSE 
 
 CMD ["bash"]
